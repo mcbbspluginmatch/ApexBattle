@@ -46,6 +46,7 @@ public class ShopListener implements Listener {
         }
         Inventory inventory = e.getClickedInventory();
         ShopManager manager = ApexBattle.getInstance().getShopManager();
+        // 基于 title 的标题判断，建议更改为 InventoryHolder 的 —— 754503921
         if (inventory == null || inventory.getType() != InventoryType.CHEST || inventory.getTitle() == null || !inventory.getTitle().equals(manager.getTitle())) {
             return;
         }

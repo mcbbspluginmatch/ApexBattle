@@ -30,6 +30,7 @@ public class Team implements ConfigurationSerializable {
     @Setter
     private int count = 5;
     @Getter
+    // 异步读写非线程安全容器 —— 754503921
     private List<Game.GamePlayer> gamePlayers = new ArrayList<>();
 
     public Map<String, Object> serialize() {
